@@ -1,27 +1,19 @@
 <div id="<%= dom_id friend %>">
-  <p>
-    <strong>First name:</strong>
-    <%= friend.first_name %>
-  </p>
-
-  <p>
-    <strong>Last name:</strong>
-    <%= friend.last_name %>
-  </p>
-
-  <p>
-    <strong>Email:</strong>
-    <%= friend.email %>
-  </p>
-
-  <p>
-    <strong>Phone:</strong>
-    <%= friend.phone %>
-  </p>
-
-  <p>
-    <strong>Twitter:</strong>
-    <%= friend.twitter %>
-  </p>
-
+  <tbody>
+    <tr>
+      <td><%= friend.first_name %></td>
+      <td><%= friend.last_name %></td>
+      <td><%= friend.email %></td>
+      <td><%= friend.phone %></td>
+      <td><%= friend.twitter %></td>
+      <td>
+        <p>
+          <%= link_to "Show this friend", friend %>
+        </p>
+      </td>
+      <td>
+        <%= button_to "Destroy this friend", friend, method: :delete %>
+      </td>
+    </tr>
+  </tbody>
 </div>
